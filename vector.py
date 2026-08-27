@@ -48,6 +48,10 @@ class Vec:
     # v1 is passed to self and 3 is passed to scalar.
     # 3 is multiplied with every element in the vector.
 
+    def __mul__(self, scalar: int | float) -> Self:
+        if not isinstance(scalar, (int, float)):
+            raise TypeError(f"Vector multiplication with invalid type: {type(scalar)}")
+        return Vec([scalar * x for x in self.elements])
 
     def __imul__(self, scalar: int | float) -> Self:
         if not isinstance(scalar, (int, float)):
@@ -138,6 +142,9 @@ if __name__ == "__main__":
     print("v1 vector is initialised here")
     v1 = Vec([2, -3, 4.5])
     print("v1 =", v1)
+
+    v9 = v1 * 3
+    print("v9 = ", v9)
 
 
     print("\nScalar multiplication of the vector v1 with scalar 3")
