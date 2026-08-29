@@ -16,7 +16,7 @@ class Vec:
     #have not used round functions, and removing it reduced the execution time
     
     # When Vec([2, 8, 9]) is written, __init__() is called automatically.
-    # [2,8, 9] is passed to src and stored in self.elements.
+    # The vector [2,8, 9] is passed to src and stored in self.elements.
 
 
     def __add__(self, t: Self) -> Self:

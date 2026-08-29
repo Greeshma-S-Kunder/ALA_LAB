@@ -1,5 +1,5 @@
 from vector import Vec;
-#I have run the same tests which are run in vec.py and got the same output.
+#I have run the same tests which are run in vector.py and got the same output.
 print("v1 vector is initialised here")
 v1 = Vec([2, -3, 4.5])
 print("v1 =", v1)
