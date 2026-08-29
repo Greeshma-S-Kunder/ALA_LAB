@@ -1,8 +1,10 @@
 import sys;
+import platform
 sys.path.append("../")
 from ALA_LAB.vector import Vec
 import time
 
+#i have checked the time of the execution of each operation using time module.
 print("v1 = Vec([2, -3, 4.5] * 8000)")
 start = time.perf_counter()
 v1 = Vec([2, -3, 4.5] * 8000)
@@ -45,12 +47,6 @@ end = time.perf_counter()
 execute_time = end - start
 print(f"{execute_time:.5e}")
 
-print("\nv2 = v1 + v3")
-start = time.perf_counter()
-v2 = v1 + v3
-end = time.perf_counter()
-execute_time = end - start
-print(f"{execute_time:.5e}")
 
 print("\nv4 = v3 - v1")
 start = time.perf_counter()
@@ -107,3 +103,11 @@ v1 = v1.norm()
 end = time.perf_counter()
 execute_time = end - start
 print(f"{execute_time:.5e}")
+
+
+#to also compare the device specifications inorder to analyse the performance
+print("\nDevice specifiactions of this device:\n")
+print("Python version:", sys.version)
+print("Operating system:", platform.system())
+print("Machine:", platform.machine())
+print("Processor:", platform.processor())
