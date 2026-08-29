@@ -13,6 +13,7 @@ class Vec:
                 if not isinstance(x, (int, float)):
                     raise TypeError(f"Scalar must be a number: {type(x)}")
             self.elements = elements
+    #have not used round functions, and removing it reduced the execution time
     
     # When Vec([2, 8, 9]) is written, __init__() is called automatically.
     # [2,8, 9] is passed to src and stored in self.elements.
@@ -23,7 +24,7 @@ class Vec:
             raise TypeError(f"Expected Vec: {type(t)}")
         if len(self.elements) != len(t.elements):
             raise TypeError("Type error - vectors must be of same dimensions")
-        return Vec([round(x + y, 5)for x, y in zip(self.elements, t.elements)])
+        return Vec([x + y for x, y in zip(self.elements, t.elements)])
     # When v1 + v2 is written, __add__() function is called.
     # v1 is passed to self and v2 is passed to t.
     # The corresponding values of both vectors are added and if thier lengths are not equal it throws an error.
@@ -33,7 +34,7 @@ class Vec:
             raise TypeError(f"Expected Vec: {type(t)}")
         if len(self.elements) != len(t.elements):
             raise TypeError("Type error - vectors must be of same dimensions")
-        return Vec([round(x - y, 5)for x, y in zip(self.elements, t.elements)])
+        return Vec([x - y for x, y in zip(self.elements, t.elements)])
     # When v1 - v2 is written, __add__() function is called.
     # v1 is passed to self and v2 is passed to t.
     # The corresponding elements of both vectors are added and if thier lengths are not equal it throws an error.
@@ -57,7 +58,7 @@ class Vec:
         if not isinstance(scalar, (int, float)):
             raise TypeError(f"Vector multiplication with invalid type: {type(scalar)}")
         for i, val in enumerate(self.elements):
-            self.elements[i] = round(val * scalar, 5)
+            self.elements[i] = val * scalar
         return self
 
 
@@ -72,7 +73,7 @@ class Vec:
 
 
     def __neg__(self) -> Self:
-        return Vec([round(-x, 5) for x in self.elements])
+        return Vec([-x for x in self.elements])
     # when a vector is passed to self and the sign of each value is changed.
 
     def __radd__(self, other) -> Self:
