@@ -1,3 +1,5 @@
+import sys;
+sys.path.append("../")
 from ALA_LAB.vector import Vec
 import time
 
