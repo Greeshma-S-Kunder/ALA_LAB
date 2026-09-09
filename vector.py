@@ -60,6 +60,16 @@ class Vec:
         for i, val in enumerate(self.elements):
             self.elements[i] = val * scalar
         return self
+    
+    #ignore - converting dense vector to its sparse representation
+    def vec_sparse(self):
+        p = []
+        for i, value in enumerate(self.elements):
+            if(value != 0):
+                p.append((i,value))        
+        return p
+    
+
 
 
     def __repr__(self) -> str:
