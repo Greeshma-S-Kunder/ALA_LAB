@@ -39,5 +39,9 @@ src/vec
 src/word2vec/src/__pycache__/
 src/word2vec/src/.venv
 src/word2vec/src/glove50
-
+.venv/
+glove50/
+/alaLab_assignments/
+__pycache__/
+*.pyc
 
