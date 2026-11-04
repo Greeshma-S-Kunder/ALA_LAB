@@ -1,0 +1,5 @@
+Comparision of performance of vector when defined by our own implementation and using numpy:
+I got to know that performancec of the vectors defined using numpy works much faster compared to our
+implementation, because since numpy is specially optimized for numerical calculations.
+The actual numerical work is performed by highly optimized low-level code rather than a
+Python-level loop for every element.
