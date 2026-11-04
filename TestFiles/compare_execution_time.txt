@@ -1,4 +1,0 @@
-The execution time of the operations on the vectors on Google Colab was slightly higher than on my 
-local computer for some operations. This may be because Colab uses a shared virtual computer, 
-while my local computer uses its own processor. The execution time can also change 
-depending on other tasks running on the computer.
